@@ -1,8 +1,20 @@
 Basic record entry and viewing functionality
 
-**Install Frontend Requirements**
+# **Install Frontend Requirements**
 
 $ npm install
 
+# **Install Backend Requirements**
 
+$ brew install virtualenv
+$ virtualenv env
+$ source env/bin/activate
+$ pip install flask
+$ pip install -U flask-cors
+$ npm install axios --save
 
+# **Run Backend**
+$ flask run
+
+# **Run Frontend**
+$ npm start
