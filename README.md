@@ -1,1 +1,1 @@
-# record-logger
+Basic input and display functionality of records
