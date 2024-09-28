@@ -3,11 +3,13 @@ import axios from 'axios';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min'; 
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   const [record, setRecord] = useState('');
   const [lastRecord, setLastRecord] = useState(null);
-  const [message] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleAddRecord = () => {
     if (record.trim() !== '') {
@@ -15,10 +17,25 @@ function App() {
         .then(response => {
           console.log(response.data);
           setRecord('');
+          setLastRecord(null);
+          toast.success("Record added successfully!");
         })
         .catch(error => {
           console.error('There was an error adding the record!', error);
+          toast.error("Error adding the record!");
         });
+    } else {
+      //setMessage('Please enter a record.');
+      toast.warn("Please enter a record!"); // Show warning toast
+    }
+  };
+
+  //function to handle typing and dismiss toast
+  const handleTyping = (e) => {
+    setRecord(e.target.value);
+    if (toast.isActive()) {
+      toast.dismiss(); // Dismiss the currently active toast
+      setMessage(''); // Clear the message
     }
   };
 
@@ -36,6 +53,7 @@ function App() {
 
   return (
     <div className="container mt-5">
+    <ToastContainer /> {/* Toast Container to show notifications */}
       <div className="card p-4 shadow-sm">
         <h1 className="text-primary text-center mb-4">Record Logger</h1>
         <div className="row">
@@ -45,7 +63,8 @@ function App() {
               <input 
                 type="text" 
                 value={record} 
-                onChange={(e) => setRecord(e.target.value)} 
+                onChange={handleTyping} 
+                //onChange={(e) => setRecord(e.target.value)}
                 className="form-control"
                 placeholder="Enter a record" 
               />
