@@ -25,3 +25,5 @@ $ flask run -p 5001
 # **Run Frontend**
 
 $ npm start
+
+Open your browser to http://localhost:3000
