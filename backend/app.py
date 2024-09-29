@@ -1,18 +1,6 @@
-# backend/app.py
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
-class RecordManager:
-    def __init__(self):
-        self.records = []
-
-    def add_record(self, record):
-        self.records.append(record)
-
-    def get_last_record(self):
-        if self.records:
-            return self.records[-1]
-        return None
+from record_manager import RecordManager
 
 # Create Flask App
 app = Flask(__name__)
