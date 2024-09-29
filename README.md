@@ -31,8 +31,6 @@ $ npm install axios --save
 
 # **Run Backend**
 
-cd application
-
 $ flask run -p 5001
 
 # **Run Frontend**
