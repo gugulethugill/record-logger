@@ -42,3 +42,7 @@ $ npm start
 Open your browser to http://localhost:3000
 
 You can then interact with the application by adding records and retrieving the last inserted record.
+
+# **Run Unit Tests**
+
+$ pytest test_app.py   or    $ python -m unittest test_app.py
