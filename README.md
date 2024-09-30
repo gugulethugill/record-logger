@@ -35,6 +35,8 @@ $ pip install flask
 
 $ pip install -U flask-cors
 
+$ pip install pytests or $ pip install Flask-Testing 
+
 # **Run Backend**
 
 $ flask run -p 5001
@@ -52,3 +54,5 @@ You can then interact with the application by adding records and retrieving the 
 # **Run Unit Tests**
 
 $ pytest test_app.py   or    $ python -m unittest test_app.py
+
+$ pytest test_record_manager.py   or    $ python -m unittest test_record_manager.py
