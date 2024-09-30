@@ -15,6 +15,12 @@ Node.js (v14 or later), npm (Node Package Manager)
 
 $ npm install
 
+$ npm install --save react-toastify
+
+$ npm install --save bootstrap
+
+$ npm install --save react-bootstrap-validation
+
 # **Install Backend Requirements**
 
 $ brew install virtualenv
