@@ -21,6 +21,8 @@ $ npm install --save bootstrap
 
 $ npm install --save react-bootstrap-validation
 
+$ npm install axios --save
+
 # **Install Backend Requirements**
 
 $ brew install virtualenv
@@ -32,8 +34,6 @@ $ source env/bin/activate
 $ pip install flask
 
 $ pip install -U flask-cors
-
-$ npm install axios --save
 
 # **Run Backend**
 
